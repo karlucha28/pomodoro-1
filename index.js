@@ -57,7 +57,7 @@ function timer(){
         workingsec.innerText --;
     } else if (workingmin.innerText != 0 && workingsec.innerText == 0){
         workingsec.innerText = 59;
-        workingmin.innerText-1;
+        workingmin.innerText--;
     }
     //timer for break countdown
     if(workingmin.innerText == 0 && workingsec == 0){
