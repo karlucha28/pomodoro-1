@@ -1,0 +1,60 @@
+body{
+    background: #ff8370;
+}
+h1{
+    text-align: center;
+    font-size: 100px;
+    font-weight: 600;
+    font-family:"Arial Rounded MT Bold";
+    color: white;
+    letter-spacing: 2px;
+}
+
+.clockbox{
+    display: block;
+    margin: 100px;
+    
+    border: 10px solid #ffa99c;
+    background-color: #ffa99c;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.clock{
+    color: white;
+    font-family:"Arial Rounded MT Bold";
+    text-align: center;
+    font-size: 60px;
+}
+
+.pom-container{
+    display:flex;
+    text-align: center;
+    font-family: "Arial Rounded MT Bold";
+    color: white;
+    font-size: 50px;
+}
+.pom-child{
+    flex:1;
+    border: 10px solid #ffa99c;
+    background-color: #ffa99c;
+    border-radius: 10px;
+    padding: 30px;
+}
+.pom-child:first-child{
+    margin-right: 20px;
+}
+#break-timer{
+    font-family: "Arial Rounded MT Bold";
+    color: white;
+    font-size: 80px;
+
+}
+#work-timer{
+    font-family: "Arial Rounded MT Bold";
+    color: white;
+    font-size: 80px;
+}
+
+
+
