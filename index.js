@@ -29,9 +29,50 @@ setInterval(clock,100);
 
 
 
+let start = document.getElementById('start');
+let pause = document.getElementById('pause');
 
+let workingmin = document.getElementById('workTimerMin');
+let workingsec = document.getElementById('workTimerSec');
 
+let breakmin = document.getElementById('breakTimerMin');
+let breaksec = document.getElementById('breakTimerSec');
 
+let startTimer;
+
+start.addEventListener('click', function(){
+    if (startTimer === undefined){
+        startTimer = setInterval(timer,1000);
+    }
+})
+
+pause.addEventListener('click',function(){
+    stopTimer()
+    startTimer=undefined;
+})
+
+function timer(){
+    //timer for work countdown
+    if(workingsec.innerText != 0){
+        workingsec.innerText --;
+    } else if (workingmin.innerText != 0 && workingsec.innerText == 0){
+        workingsec.innerText = 59;
+        workingmin.innerText-1;
+    }
+    //timer for break countdown
+    if(workingmin.innerText == 0 && workingsec == 0){
+        if(breaksec.innerText != 0){
+            breaksec.innerText -1;
+        }else if (breakmin.innerText !=0 && breaksec.innertext ==0){
+            breaksec.innertext = 59;
+            breakmin.innertext -1;
+        }
+    }
+}
+
+function stopTimer(){
+    clearInterval(startTimer);
+}
 
 
 
